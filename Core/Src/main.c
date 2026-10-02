@@ -18,9 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
-#include <string.h>
-
 #include "dma.h"
 #include "usart.h"
 #include "gpio.h"
