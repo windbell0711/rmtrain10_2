@@ -18,6 +18,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+
+#include <string.h>
+
 #include "dma.h"
 #include "usart.h"
 #include "gpio.h"
@@ -96,6 +99,7 @@ int main(void)
 
   HAL_UART_Init(&huart1);
   HAL_UART_Receive_DMA(&huart1, rx_msg, 10);
+  // HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_msg, 10);
 
   uint8_t tx_msg[] = "HelloRobomaster!";
 
@@ -103,6 +107,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_UART_Transmit(&huart1, tx_msg, sizeof(tx_msg)-1, 500);
   HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
   HAL_Delay(500);
   HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
