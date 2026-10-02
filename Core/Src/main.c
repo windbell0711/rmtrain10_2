@@ -25,6 +25,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "callback.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,6 +94,7 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_USART1_UART_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 
   HAL_UART_Init(&huart1);
@@ -99,6 +102,10 @@ int main(void)
   HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_msg, 10);
 
   uint8_t tx_msg[] = "HelloRobomaster!";
+
+  HAL_UART_Init(&huart3);
+
+  robotInit();
 
   /* USER CODE END 2 */
 

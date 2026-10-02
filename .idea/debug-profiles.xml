@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Debug Profiles">
+    <debug-profiles>
+      <debug-profile>
+        <option name="id" value="d710bc02-9dd5-4ed2-8ebf-44b6c0e4872c" />
+        <option name="type" value="stlink" />
+        <option name="name" value="ST-LINK" />
+        <settings>
+          <device>
+            <option name="shared" value="true" />
+          </device>
+          <gdb>
+            <option name="liveWatchesEnabled" value="true" />
+            <option name="persistentSession" value="false" />
+          </gdb>
+          <server>
+            <option name="executable" value="D:\Program Files\STM32CubeCLT_1.22.0\STLink-gdb-server\bin\ST-LINK_gdbserver.exe" />
+            <option name="stm32CubeProgrammerPath" value="D:\Program Files\STM32CubeCLT_1.22.0\STM32CubeProgrammer\bin" />
+          </server>
+        </settings>
+      </debug-profile>
+    </debug-profiles>
+  </component>
+</project>
