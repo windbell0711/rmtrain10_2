@@ -98,8 +98,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   HAL_UART_Init(&huart1);
-  HAL_UART_Receive_DMA(&huart1, rx_msg, 10);
-  // HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_msg, 10);
+  // HAL_UART_Receive_DMA(&huart1, rx_msg, 10);
+  HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_msg, 10);
 
   uint8_t tx_msg[] = "HelloRobomaster!";
 
